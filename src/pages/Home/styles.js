@@ -280,9 +280,12 @@ export const Button = styled.button`
   padding: 16px 32px;
 
   border: none;
-  color: #fff;
-  display: block;
 
+  display: block;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
   margin-top: ${({ mt = "0px" }) => mt};
   margin-inline: ${({ mx = "0px" }) => mx};
 `;

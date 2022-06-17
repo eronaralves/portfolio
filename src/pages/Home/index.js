@@ -52,7 +52,9 @@ export default function Home() {
           </ul>
         </div>
         <Button mx="auto" mt="36px">
-          Me conheça melhor
+          <a href="https://www.linkedin.com/in/eronaralves/" target="_blank">
+            Me conheça melhor
+          </a>
         </Button>
         {/* </div> */}
       </MenuMobile>
@@ -91,7 +93,14 @@ export default function Home() {
               Desenvolvedor Front-end com foco em resolução de problemas,
               acessibilidade, escalabilidade e desempenho.
             </p>
-            <Button mt="34px">Me conheça melhor</Button>
+            <Button mt="34px">
+              <a
+                href="https://www.linkedin.com/in/eronaralves/"
+                target="_blank"
+              >
+                Me conheça melhor
+              </a>
+            </Button>
           </BoxApresentationPerfil>
           <BoxImageProfire>
             <img
