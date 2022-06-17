@@ -51,7 +51,7 @@ export default function Home() {
             <li>Contato</li>
           </ul>
         </div>
-        <Button mx="auto" mt="36px">
+        <Button mx="auto" mt="36px" background="#fff" color="#eb9d0c">
           <a href="https://www.linkedin.com/in/eronaralves/" target="_blank">
             Me conheça melhor
           </a>

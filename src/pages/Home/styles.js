@@ -83,7 +83,7 @@ export const MenuMobile = styled.div`
   width: 100%;
   height: 100vh;
 
-  background: #b24139;
+  background: #eb9d0c;
 
   position: fixed;
 
@@ -125,44 +125,6 @@ export const MenuMobile = styled.div`
       }
     }
   }
-
-  // & > div {
-  //   height: 100%;
-  //   width: 45%;
-
-  //   position: absolute;
-  //   right: 0;
-  //   top: 0;
-  //   z-index: 3;
-
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-
-  //   background: #b24139;
-
-  //   li {
-  //     text-align: center;
-  //     margin-bottom: 48px;
-  //   }
-
-  //   & > div:nth-child(1) {
-  //     width: 90%;
-
-  //     display: flex;
-  //     justify-content: space-between;
-  //     align-items: center;
-  //     height: 52px;
-  //     margin-bottom: 60px;
-
-  //     div {
-  //       display: flex;
-  //       & > h2:nth-child(2) {
-  //         color: #eb9d0c;
-  //       }
-  //     }
-  //   }
-  // }
 `;
 
 export const ContainerApresentation = styled.div`
@@ -276,15 +238,18 @@ export const Button = styled.button`
   font-weight: 700;
   line-height: 15px;
   border-radius: 30px;
-  background-color: #eb9d0c;
   padding: 16px 32px;
 
   border: none;
 
   display: block;
+
+  background-color: ${({ background }) =>
+    background ? background : "#eb9d0c"};
+
   a {
     text-decoration: none;
-    color: #fff;
+    color: ${({ color }) => (color ? color : "#fff")};
   }
   margin-top: ${({ mt = "0px" }) => mt};
   margin-inline: ${({ mx = "0px" }) => mx};
