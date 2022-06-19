@@ -2,15 +2,23 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow-x: hidden;
 
   & > img {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 80%;
+    width: 100vw;
     z-index: 0;
+  }
+
+  .title-section {
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 46px;
+    color: #eb9d0c;
+    margin-bottom: 16px;
   }
 `;
 
@@ -253,4 +261,42 @@ export const Button = styled.button`
   }
   margin-top: ${({ mt = "0px" }) => mt};
   margin-inline: ${({ mx = "0px" }) => mx};
+`;
+
+export const ContainertMySkills = styled.div`
+  margin-top: 60px;
+  p {
+    width: 100%;
+    max-width: 500px;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    opacity: 0.7;
+    margin-bottom: 27px;
+  }
+`;
+
+export const ContentMySkills = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+`;
+
+export const MySkill = styled.div`
+  text-align: center;
+
+  svg {
+    color: #fff;
+    &:hover {
+      color: ${({ color }) => color};
+    }
+  }
+  h3 {
+    margin-top: 13px;
+  }
+`;
+
+export const ContainerSoftSkills = styled.div`
+  margin-top: 40px;
 `;
