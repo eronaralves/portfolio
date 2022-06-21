@@ -278,12 +278,15 @@ export const ContainertMySkills = styled.div`
 `;
 
 export const ContentMySkills = styled.div`
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 60px;
 `;
 
-export const MySkill = styled.div`
+export const BoxIcons = styled.div`
+  width: 100%;
+  max-width: 120px;
   text-align: center;
 
   svg {
@@ -292,8 +295,10 @@ export const MySkill = styled.div`
       color: ${({ color }) => color};
     }
   }
+
   h3 {
     margin-top: 13px;
+    text-align: center;
   }
 `;
 

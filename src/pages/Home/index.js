@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+// Icons
 import {
   SiHtml5,
   SiCss3,
@@ -14,7 +16,7 @@ import {
 import { DiGit } from "react-icons/di"
 
 
-//Styles
+// Styles
 import {
   Container,
   Content,
@@ -29,17 +31,25 @@ import {
   Button,
   ContainertMySkills,
   ContentMySkills,
-  MySkill,
+  BoxIcons,
   ContainerSoftSkills
 } from "./styles";
 
 //Components
-import MySkills from "../../Components/MySkills";
-
-//Images
+import  SoftSkills  from "../../Components/SoftSkills";
+// Images
 import lineYellow from "../../assets/lineYellow.png";
 import photoProfire from "../../assets/profire.png";
 import Close from "../../assets/Close.svg";
+
+// Images Soft Skills
+import ProblemResolving from "../../assets/problem-solving.png"
+import Creativity from "../../assets/creativity.png"
+import Comunicacao from "../../assets/comunicacao.png"
+import Adaptacao from "../../assets/adaptacao.png"
+import Lampada from "../../assets/lampada.png"
+
+
 
 export default function Home(props) {
   const [menuMobileOpen, setMenuMobileOpen] = useState(false);
@@ -47,6 +57,7 @@ export default function Home(props) {
   return (
     <>
       <Container>
+        
         <MenuMobile className={`${menuMobileOpen ? "isOpen" : ""}`}>
           {/* <div class="content"> */}
           <div className="content">
@@ -137,54 +148,62 @@ export default function Home(props) {
               conhecimento.
             </p>
             <ContentMySkills>
-              <MySkill color="#DD4B25">
+              <BoxIcons color="#DD4B25">
                 <SiHtml5 fontSize="71px" />
                 <h3>HTML5</h3>
-              </MySkill>
-              <MySkill color="#1A6FB4">
+              </BoxIcons>
+              <BoxIcons color="#1A6FB4">
                 <SiCss3 fontSize="71px" />
                 <h3>Css3</h3>
-              </MySkill>
-              <MySkill color="#EFD81D">
+              </BoxIcons>
+              <BoxIcons color="#EFD81D">
                 <SiJavascript fontSize="71px" />
                 <h3>Java Script</h3>
-              </MySkill>
-              <MySkill color="#5ED3F3">
+              </BoxIcons>
+              <BoxIcons color="#5ED3F3">
                 <SiReact fontSize="71px" />
                 <h3>React</h3>
-              </MySkill>
-              <MySkill color="#002D4A">
+              </BoxIcons>
+              <BoxIcons color="#002D4A">
                 <SiNextdotjs fontSize="71px" />
                 <h3>Next</h3>
-              </MySkill>
-              <MySkill color="#D06EAA">
+              </BoxIcons>
+              <BoxIcons color="#D06EAA">
                 <SiStyledcomponents fontSize="71px" />
                 <h3>Styled Components</h3>
-              </MySkill>
-              <MySkill color="#2F74C0">
+              </BoxIcons>
+              <BoxIcons color="#2F74C0">
                 <SiTypescript fontSize="71px" />
                 <h3>Typescript</h3>
-              </MySkill>
-              <MySkill color="#E84D31">
+              </BoxIcons>
+              <BoxIcons color="#E84D31">
                 <DiGit fontSize="71px" />
                 <h3>Git</h3>
-              </MySkill>
-              <MySkill color="#302E2F">
+              </BoxIcons>
+              <BoxIcons color="#302E2F">
                 <SiGithub fontSize="71px" />
                 <h3>Github</h3>
-              </MySkill>
-              <MySkill color="#63C3C6">
+              </BoxIcons>
+              <BoxIcons color="#63C3C6">
                 <SiChakraui fontSize="71px" />
                 <h3>Chakra Ui</h3>
-              </MySkill>
-              <MySkill color="pink">
+              </BoxIcons>
+              <BoxIcons color="pink">
                 <SiSass fontSize="71px" />
-                <h3>Chakra Ui</h3>
-              </MySkill>
+                <h3>Sass</h3>
+              </BoxIcons>
             </ContentMySkills>
           </ContainertMySkills>
           <ContainerSoftSkills>
             <h2 className="title-section">Soft Skills</h2>
+            <ContentMySkills>
+              <SoftSkills img={ProblemResolving} label="Problem Resolving"/>
+              <SoftSkills img={Creativity} label="Creativity"/>
+              <SoftSkills img={Comunicacao} label="Comunicacao"/>
+              <SoftSkills img={Adaptacao} label="Adaptacao"/>
+              <SoftSkills img={Lampada} label="Inovação"/>
+            </ContentMySkills>
+
           </ContainerSoftSkills>
         </Content>
         {/* <img src={lineYellow} alt="linha amarelo" /> */}
