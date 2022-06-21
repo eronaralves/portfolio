@@ -280,13 +280,18 @@ export const ContainertMySkills = styled.div`
 export const ContentMySkills = styled.div`
   width: 100%;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   gap: 60px;
+
+  @media(max-width: 320px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 export const BoxIcons = styled.div`
-  width: 100%;
-  max-width: 120px;
+
   text-align: center;
 
   svg {
@@ -299,6 +304,11 @@ export const BoxIcons = styled.div`
   h3 {
     margin-top: 13px;
     text-align: center;
+  }
+
+  @media(max-width: 1000px) {
+    width: 100%;
+    max-width: 120px;
   }
 `;
 
