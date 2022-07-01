@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 // Icons
 import {
@@ -52,7 +52,25 @@ import Lampada from "../../assets/lampada.png"
 
 
 export default function Home(props) {
-  const [menuMobileOpen, setMenuMobileOpen] = useState(false);
+  const [menuMobileOpen, setMenuMobileOpen] = useState(
+  false);
+  const [mensagewelcome, setMensagewelcome] = useState()
+
+  useEffect(() => {
+    const currentData = new Date()
+    const hours = currentData.getHours()
+
+    if(hours <= 11 && hours >= 4) {
+      setMensagewelcome('Bom dia')
+    } else if(hours >= 12 && hours < 18) {
+      setMensagewelcome('Boa Tarde')
+    } else if(hours >= 1 && hours < 4) {
+      setMensagewelcome('Voce deve estar cansado, dorme um pouco')
+    } else {
+      setMensagewelcome('Boa Noite')
+    }
+
+  }, [])
 
   return (
     <>
@@ -117,7 +135,7 @@ export default function Home(props) {
           </Header>
           <ContainerApresentation>
             <BoxApresentationPerfil>
-              <h2>Bom dia. Boa tarde ou Boa noite!</h2>
+              <h2>{mensagewelcome}</h2>
               <h1>
                 Olá, Eu sou o <strong>Eronar Alves</strong>
               </h1>
