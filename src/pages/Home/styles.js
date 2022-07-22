@@ -349,4 +349,9 @@ export const BoxProjets = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  @media(max-width: 320px) {
+    display: flex;
+    justify-content: center;
+  }
 `;

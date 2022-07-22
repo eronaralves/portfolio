@@ -8,12 +8,12 @@ export const Link = styled.a`
 export const BoxSoftSkills = styled.div`
   width: 100%;
   max-width: 250px;
-  
 
   h3 {
-    font-size: 26px;
+    font-size: 20px;
+    font-weight: 600;
     text-align: center;
-    color: #fff;
+    color: #E1E1E6;
   }
 
   img {

@@ -2,6 +2,8 @@ import Onu from "../assets/onu.png"
 import VaiNaWeb from "../assets/page-vnw.png"
 import DashGo from "../assets/dashgo.png"
 import TodoFlix from "../assets/todoflix.png"
+import Djavan from "../assets/djavan.png"
+import Calculator from "../assets/calculator.png"
 
 export const Projets = [
   {
@@ -23,5 +25,15 @@ export const Projets = [
     img: TodoFlix,
     label: "TodoFlix",
     href: "https://todo-flix.vercel.app/"
+  },
+  {
+    img: Djavan,
+    label: "Djavan",
+    href: "https://www.djavand.com.br/"
+  },
+  {
+    img: Calculator,
+    label: "Calculadora",
+    href: "https://app-calculator-eosin.vercel.app"
   }
 ]
