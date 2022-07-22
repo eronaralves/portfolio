@@ -32,11 +32,18 @@ import {
   ContainertMySkills,
   ContentMySkills,
   BoxIcons,
-  ContainerSoftSkills
+  ContainerSoftSkills,
+  ContainerProjects,
+  BoxProjets
 } from "./styles";
 
+// Ultis
+import {Projets} from "../../Ultis"
+
 //Components
-import  SoftSkills  from "../../Components/SoftSkills";
+import SoftSkills  from "../../Components/SoftSkills";
+import CardsProjects  from "../../Components/CardsProjects";
+
 // Images
 import lineYellow from "../../assets/lineYellow.png";
 import photoProfire from "../../assets/profire.png";
@@ -50,11 +57,11 @@ import Adaptacao from "../../assets/adaptacao.png"
 import Lampada from "../../assets/lampada.png"
 
 
-
 export default function Home(props) {
   const [menuMobileOpen, setMenuMobileOpen] = useState(
   false);
   const [mensagewelcome, setMensagewelcome] = useState()
+  const [projects, setProjects] = useState(Projets)
 
   useEffect(() => {
     const currentData = new Date()
@@ -106,9 +113,8 @@ export default function Home(props) {
               Me conheça melhor
             </a>
           </Button>
-          {/* </div> */}
         </MenuMobile>
-        {/* )} */}
+
 
         <Content>
           <Header>
@@ -221,8 +227,17 @@ export default function Home(props) {
               <SoftSkills img={Adaptacao} label="Adaptacao"/>
               <SoftSkills img={Lampada} label="Inovação"/>
             </ContentMySkills>
-
+          
           </ContainerSoftSkills>
+
+          <ContainerProjects> 
+            <h2 className="title-section">Projetos</h2>
+            <BoxProjets>
+              {projects.map(item => (
+                <CardsProjects img={item.img} label={item.label} href={item.href}/>
+              ))}
+            </BoxProjets>
+          </ContainerProjects>
         </Content>
         {/* <img src={lineYellow} alt="linha amarelo" /> */}
       </Container>

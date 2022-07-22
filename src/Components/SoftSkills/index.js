@@ -9,5 +9,6 @@ export default function SoftSkills(props) {
       <img src={props.img} alt={props.label}/>
       <h3>{props.label}</h3>
     </BoxSoftSkills>
+
   )
 }

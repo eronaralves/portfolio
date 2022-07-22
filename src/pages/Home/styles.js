@@ -20,6 +20,20 @@ export const Container = styled.div`
     color: #eb9d0c;
     margin-bottom: 16px;
   }
+
+  @media(max-width: 560px) {
+    .title-section {
+    font-size: 35px;
+    
+  }
+  }
+
+  @media(max-width: 430px) {
+    .title-section {
+    font-size: 25px;
+    
+  }
+  }
 `;
 
 export const Content = styled.div`
@@ -87,6 +101,7 @@ export const MenuHamburguer = styled.div`
     display: block;
   }
 `;
+
 export const MenuMobile = styled.div`
   width: 100%;
   height: 100vh;
@@ -265,6 +280,7 @@ export const Button = styled.button`
 
 export const ContainertMySkills = styled.div`
   margin-top: 60px;
+
   p {
     width: 100%;
     max-width: 500px;
@@ -275,6 +291,14 @@ export const ContainertMySkills = styled.div`
     opacity: 0.7;
     margin-bottom: 27px;
   }
+
+  @media(max-width: 430px) {
+    p {
+      font-size: 16px;
+      line-height: 25px;
+    }
+  }
+
 `;
 
 export const ContentMySkills = styled.div`
@@ -313,5 +337,16 @@ export const BoxIcons = styled.div`
 `;
 
 export const ContainerSoftSkills = styled.div`
-  margin-top: 40px;
+  margin-top: 100px;
+`;
+
+export const ContainerProjects = styled.div`
+  width: 100%;
+  margin-top: 100px;
+`;
+
+export const BoxProjets = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 `;
