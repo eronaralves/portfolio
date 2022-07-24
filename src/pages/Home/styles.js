@@ -74,6 +74,10 @@ export const Navagation = styled.ul`
   display: flex;
   gap: 16px;
 
+  a {
+    text-decoration: none;
+  }
+
   li {
     font-size: 16px;
     font-weight: 400;
@@ -311,28 +315,6 @@ export const ContentMySkills = styled.div`
   @media(max-width: 320px) {
     display: flex;
     justify-content: center;
-  }
-`;
-
-export const BoxIcons = styled.div`
-
-  text-align: center;
-
-  svg {
-    color: #fff;
-    &:hover {
-      color: ${({ color }) => color};
-    }
-  }
-
-  h3 {
-    margin-top: 13px;
-    text-align: center;
-  }
-
-  @media(max-width: 1000px) {
-    width: 100%;
-    max-width: 120px;
   }
 `;
 
